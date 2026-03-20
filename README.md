@@ -8,13 +8,20 @@ My custom skills for [Claude Code](https://docs.anthropic.com/en/docs/claude-cod
 |-------|-------------|
 | **ljg-card** | Content caster — transforms content into PNG visuals (long card, infograph, poster). Infograph mode uses a content-adaptive design system: the AI analyzes content density, structure, and emotion to generate unique visual compositions from scratch — no fixed template, style serves thought. |
 | **ljg-paper** | Paper reader — academic paper analysis pipeline |
-| **ljg-paper-flow** | Paper workflow — reads papers + casts cards in one go (combines ljg-paper and ljg-card) |
 | **ljg-plain** | Plain language rewriter — makes complex content accessible |
 | **ljg-x-download** | X media downloader — download images and videos from X/Twitter posts to ~/Downloads |
 | **ljg-skill-map** | Skill map viewer — visual overview of all installed skills |
 | **ljg-word** | English word mastery — deep-dive word deconstruction |
-| **ljg-word-card** | Word card workflow — deep-dive word analysis + infograph card in one go (combines ljg-word and ljg-card -i) |
 | **ljg-writes** | Writing engine — think through an idea by writing it out |
+
+## Workflows
+
+Workflows chain multiple skills into a single command.
+
+| Workflow | Skills | Description |
+|----------|--------|-------------|
+| **ljg-paper-flow** | ljg-paper → ljg-card | Reads papers + casts cards in one go |
+| **ljg-word-card** | ljg-word → ljg-card -i | Deep-dive word analysis + infograph card in one go |
 
 ## Install
 
