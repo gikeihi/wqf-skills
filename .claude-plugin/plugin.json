@@ -1,12 +1,12 @@
 {
-  "name": "ljg-skills",
+  "name": "wqf-skills",
   "version": "1.0.0",
   "description": "LJG's personal Claude Code skills collection - paper reading, content casting, writing tools",
   "author": {
-    "name": "lijigang",
-    "url": "https://github.com/lijigang"
+    "name": "gikeihi",
+    "url": "https://github.com/gikeihi"
   },
-  "repository": "https://github.com/lijigang/ljg-skills",
+  "repository": "https://github.com/gikeihi/wqf-skills",
   "keywords": ["skills", "paper-reading", "content-casting", "writing"],
   "skills": "./skills"
 }

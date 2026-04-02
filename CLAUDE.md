@@ -9,14 +9,14 @@ This is a personal Claude Code skills repository. Each skill is a self-contained
 ## Repository Structure
 
 ```
-ljg-skills/
-├── ljg-*/              # Each skill is a directory with "ljg-" prefix
+wqf-skills/
+├── wqf-*/              # Each skill is a directory with "wqf-" prefix
 │   ├── SKILL.md        # Skill definition with YAML frontmatter
 │   ├── references/     # Reference docs for complex skills
 │   ├── assets/         # Templates, images, scripts
 │   └── scripts/        # Helper scripts (bash, node)
 ├── README.md
-└── .gitignore          # Ignores everything except ljg-*/ and specific files
+└── .gitignore          # Ignores everything except wqf-*/ and specific files
 ```
 
 ## Skill Format
@@ -38,28 +38,28 @@ version: "x.x.x"
 
 | Skill | Purpose | External Dependencies |
 |-------|---------|----------------------|
-| `ljg-card` | Content → PNG visuals (long cards, infographs, posters) | Node.js + Playwright |
-| `ljg-paper` | Academic paper analysis pipeline | None |
-| `ljg-paper-flow` | Paper workflow (paper + card combined) | None |
-| `ljg-plain` | Plain language rewriter | None |
-| `ljg-skill-map` | Visual overview of installed skills | Bash |
-| `ljg-word` | English word deep-dive | None |
-| `ljg-writes` | Writing engine for thinking through ideas | None |
+| `wqf-card` | Content → PNG visuals (long cards, infographs, posters) | Node.js + Playwright |
+| `wqf-paper` | Academic paper analysis pipeline | None |
+| `wqf-paper-flow` | Paper workflow (paper + card combined) | None |
+| `wqf-plain` | Plain language rewriter | None |
+| `wqf-skill-map` | Visual overview of installed skills | Bash |
+| `wqf-word` | English word deep-dive | None |
+| `wqf-writes` | Writing engine for thinking through ideas | None |
 
 ## Commands
 
-### Install ljg-card Dependencies
+### Install wqf-card Dependencies
 
-`ljg-card` requires Playwright for screenshot capture:
+`wqf-card` requires Playwright for screenshot capture:
 
 ```bash
-cd ljg-card && npm install && npx playwright install chromium
+cd wqf-card && npm install && npx playwright install chromium
 ```
 
-### Test ljg-skill-map Scanner
+### Test wqf-skill-map Scanner
 
 ```bash
-bash ljg-skill-map/scripts/scan.sh
+bash wqf-skill-map/scripts/scan.sh
 ```
 
 ### Install Skills (for users)
@@ -67,7 +67,7 @@ bash ljg-skill-map/scripts/scan.sh
 ```bash
 # Copy all skills to Claude Code
 mkdir -p ~/.claude/skills
-cp -r ljg-* ~/.claude/skills/
+cp -r wqf-* ~/.claude/skills/
 ```
 
 ## Architecture Notes
@@ -85,7 +85,7 @@ Several skills share a common pattern for content ingestion:
 - **File path** → Read tool
 - **Raw text** → Direct use
 
-### ljg-card Architecture
+### wqf-card Architecture
 
 The most complex skill with multiple rendering modes:
 
@@ -96,7 +96,7 @@ The most complex skill with multiple rendering modes:
 
 ### Shared Conventions
 
-**Org-mode output** (ljg-paper, ljg-plain, ljg-writes):
+**Org-mode output** (wqf-paper, wqf-plain, wqf-writes):
 - Bold: `*text*` (single asterisk, not `**`)
 - Filenames: `{timestamp}--{title}__{type}.org`
 - Output directory: `~/Documents/notes/`

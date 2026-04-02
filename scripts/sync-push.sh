@@ -1,12 +1,12 @@
 #!/bin/bash
 # Usage: sync-push.sh <skill-name> <commit-message>
-# Syncs a local ljg-* skill to the repo and pushes.
+# Syncs a local wqf-* skill to the repo and pushes.
 
 set -euo pipefail
 
 SKILL="$1"
 MSG="$2"
-REPO="$HOME/.claude/ljg-skills-repo"
+REPO="$HOME/.claude/wqf-skills-repo"
 LOCAL="$HOME/.claude/skills/$SKILL"
 TARGET="$REPO/skills/$SKILL"
 

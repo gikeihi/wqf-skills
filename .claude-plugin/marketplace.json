@@ -1,13 +1,13 @@
 {
-  "name": "ljg-skills",
+  "name": "wqf-skills",
   "displayName": "LJG Skills Collection",
   "description": "Personal Claude Code skills collection for paper reading, content casting, and writing workflows",
   "version": "1.0.0",
   "owner": {
-    "name": "lijigang",
-    "url": "https://github.com/lijigang"
+    "name": "gikeihi",
+    "url": "https://github.com/gikeihi"
   },
-  "repository": "https://github.com/lijigang/ljg-skills",
+  "repository": "https://github.com/gikeihi/wqf-skills",
   "license": "MIT",
   "keywords": [
     "skills",
@@ -25,7 +25,7 @@
   ],
   "plugins": [
     {
-      "name": "ljg-skills",
+      "name": "wqf-skills",
       "description": "LJG's personal Claude Code skills collection",
       "version": "1.0.0",
       "source": "./"
