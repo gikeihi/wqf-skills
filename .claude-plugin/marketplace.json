@@ -1,6 +1,6 @@
 {
   "name": "wqf-skills",
-  "displayName": "LJG Skills Collection",
+  "displayName": "WQF Skills Collection",
   "description": "Personal Claude Code skills collection for paper reading, content casting, and writing workflows",
   "version": "1.0.0",
   "owner": {
@@ -26,7 +26,7 @@
   "plugins": [
     {
       "name": "wqf-skills",
-      "description": "LJG's personal Claude Code skills collection",
+      "description": "WQF's personal Claude Code skills collection",
       "version": "1.0.0",
       "source": "./"
     }
