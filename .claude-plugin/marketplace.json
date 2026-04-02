@@ -2,7 +2,7 @@
   "name": "wqf-skills",
   "displayName": "WQF Skills Collection",
   "description": "Personal Claude Code skills collection for paper reading, content casting, and writing workflows",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "owner": {
     "name": "gikeihi",
     "url": "https://github.com/gikeihi"
@@ -27,7 +27,7 @@
     {
       "name": "wqf-skills",
       "description": "WQF's personal Claude Code skills collection",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "source": "./"
     }
   ]
