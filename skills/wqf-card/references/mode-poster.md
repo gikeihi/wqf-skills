@@ -2,7 +2,7 @@
 
 ## 步骤 1：读取模板
 
-Read `~/.claude/skills/wqf-card/assets/poster_template.html`
+Read `$SKILL_DIR/assets/poster_template.html`
 
 ## 步骤 1.5：色调感知
 
@@ -106,7 +106,7 @@ Read `~/.claude/skills/wqf-card/assets/poster_template.html`
 ## 步骤 7：截图
 
 ```bash
-node ~/.claude/skills/wqf-card/assets/capture.js /tmp/wqf_cast_poster_{name}_{N}.html ~/Downloads/{name}_{N}.png 1080 1440
+node $SKILL_DIR/assets/capture.js /tmp/wqf_cast_poster_{name}_{N}.html ~/Downloads/{name}_{N}.png 1080 1440
 ```
 
 多张卡片可并行截图。

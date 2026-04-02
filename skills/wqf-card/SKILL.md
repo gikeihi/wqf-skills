@@ -36,21 +36,39 @@ version: "1.7.0"
 
 从内容提取标题或核心思想作为 `{name}`（中文直接用，去标点，≤ 20 字符）。
 
+### 定位 Skill 目录
+
+本 skill 可能安装在不同路径。生成前先定位实际路径：
+
+```bash
+SKILL_DIR=$(find ~/.claude -type f -name "capture.js" -path "*/wqf-card/assets/*" 2>/dev/null | head -1 | xargs dirname | xargs dirname)
+```
+
+后续所有路径基于 `$SKILL_DIR`。
+
 ### 截图工具
 
 ```bash
-node ~/.claude/skills/wqf-card/assets/capture.js <html> <png> <width> <height> [fullpage]
+node "$SKILL_DIR/assets/capture.js" <html> <png> <width> <height> [fullpage]
 ```
 
-依赖：`~/.claude/skills/wqf-card/node_modules/` 中的 playwright。如报错：
+依赖：`$SKILL_DIR/node_modules/` 中的 playwright。如报错：
 
 ```bash
-cd ~/.claude/skills/wqf-card && npm install playwright && npx playwright install chromium
+cd "$SKILL_DIR" && npm install playwright && npx playwright install chromium
+```
+
+### Logo 路径
+
+模板中 `{{LOGO_PATH}}` 占位符需替换为实际绝对路径：
+
+```
+file://$SKILL_DIR/assets/logo.png
 ```
 
 ### Footer
 
-- 左侧：logo + weiqingfei（已硬编码在模板中）
+- 左侧：logo + weiqingfei（模板中为占位符 `{{LOGO_PATH}}`，生成时替换）
 - 右侧：内容来源（可选）——有明确来源时显示（如作者名、arxiv ID、网站名等），无来源时留空。使用 `{{SOURCE_LINE}}` 变量：有来源时填 `<span class="info-source">来源文字</span>`，否则空字符串。适用于 `-l`、`-i`、`-v`、`-c`、`-w` 模具（`-m` 多卡无 footer，不适用）。
 
 ### 交付

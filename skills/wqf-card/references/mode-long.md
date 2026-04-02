@@ -2,7 +2,7 @@
 
 ## 步骤 1：读取模板
 
-Read `~/.claude/skills/wqf-card/assets/long_template.html`
+Read `$SKILL_DIR/assets/long_template.html`
 
 ## 步骤 2：内容预处理
 
@@ -84,5 +84,5 @@ Read `~/.claude/skills/wqf-card/assets/long_template.html`
 ## 步骤 5：截图
 
 ```bash
-node ~/.claude/skills/wqf-card/assets/capture.js /tmp/wqf_cast_long_{name}.html ~/Downloads/{name}.png 1080 800 fullpage
+node $SKILL_DIR/assets/capture.js /tmp/wqf_cast_long_{name}.html ~/Downloads/{name}.png 1080 800 fullpage
 ```
